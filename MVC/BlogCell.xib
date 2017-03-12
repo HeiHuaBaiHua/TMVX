@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogCell" id="KGk-i7-Jjw" customClass="BlogCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-uG-LNf">
+                        <rect key="frame" x="7" y="0.0" width="88" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="Ba7-3a-QDf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-6K-XNu">
+                        <rect key="frame" x="103" y="10" width="161" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="YWV-X8-Tdz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-D8-D0p">
+                        <rect key="frame" x="224" y="10" width="40" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="KPS-u8-naD"/>
+                            <constraint firstAttribute="width" constant="40" id="oMv-Rb-Z1Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="赞 8">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickLikeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UJU-Qp-cwp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e1-Mg-e9P">
+                        <rect key="frame" x="272" y="9" width="40" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="HHK-9y-Cc3"/>
+                            <constraint firstAttribute="height" constant="30" id="UrR-eY-MyS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="分享 8">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6e1-Mg-e9P" secondAttribute="trailing" constant="8" id="6p5-UV-VtE"/>
+                    <constraint firstAttribute="bottom" secondItem="6e1-Mg-e9P" secondAttribute="bottom" constant="4.5" id="8cJ-h1-z8b"/>
+                    <constraint firstItem="ZaG-uG-LNf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="900-ut-2AW"/>
+                    <constraint firstItem="6e1-Mg-e9P" firstAttribute="leading" secondItem="HVo-D8-D0p" secondAttribute="trailing" constant="8" id="9vX-NL-gde"/>
+                    <constraint firstItem="6e1-Mg-e9P" firstAttribute="leading" secondItem="HVo-D8-D0p" secondAttribute="trailing" constant="8" id="ZhN-fd-3yM"/>
+                    <constraint firstItem="oQl-6K-XNu" firstAttribute="leading" secondItem="ZaG-uG-LNf" secondAttribute="trailing" constant="8" id="bLo-fc-OXw"/>
+                    <constraint firstItem="6e1-Mg-e9P" firstAttribute="leading" secondItem="oQl-6K-XNu" secondAttribute="trailing" constant="8" id="eNo-2O-EYo"/>
+                    <constraint firstItem="ZaG-uG-LNf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="f2V-57-ivz"/>
+                    <constraint firstItem="6e1-Mg-e9P" firstAttribute="leading" secondItem="HVo-D8-D0p" secondAttribute="trailing" constant="8" id="hav-xf-DAN"/>
+                    <constraint firstItem="6e1-Mg-e9P" firstAttribute="leading" secondItem="oQl-6K-XNu" secondAttribute="trailing" constant="8" id="jVF-fR-HND"/>
+                    <constraint firstAttribute="bottom" secondItem="HVo-D8-D0p" secondAttribute="bottom" constant="3.5" id="qcI-JR-uXC"/>
+                    <constraint firstAttribute="bottom" secondItem="oQl-6K-XNu" secondAttribute="bottom" constant="0.5" id="stH-i1-LIx"/>
+                    <constraint firstAttribute="bottom" secondItem="ZaG-uG-LNf" secondAttribute="bottom" constant="0.5" id="tM5-un-Fju"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="likeButton" destination="HVo-D8-D0p" id="Xll-OY-tOQ"/>
+                <outlet property="shareButton" destination="6e1-Mg-e9P" id="ovD-zt-Vc2"/>
+                <outlet property="summaryLabel" destination="oQl-6K-XNu" id="l3m-Yq-aP2"/>
+                <outlet property="titleLabel" destination="ZaG-uG-LNf" id="bnE-6v-BYa"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

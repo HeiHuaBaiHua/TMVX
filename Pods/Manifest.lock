@@ -1,0 +1,27 @@
+PODS:
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (2.4.12)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - Toast (3.1.0)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.1)
+  - MJRefresh (~> 2.4.10)
+  - ReactiveCocoa (~> 2.5)
+  - Toast (~> 3.0)
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
+
+PODFILE CHECKSUM: 23a3f0d0514edf8ba00287288cedbba6eb59f25b
+
+COCOAPODS: 1.2.0

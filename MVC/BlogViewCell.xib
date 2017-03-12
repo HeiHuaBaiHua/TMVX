@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogViewCell" id="KGk-i7-Jjw" customClass="BlogViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prl-Nt-aaj">
+                        <rect key="frame" x="10" y="0.0" width="88" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="sq3-nX-c5B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQq-xO-Qac">
+                        <rect key="frame" x="106" y="10" width="161" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="bQp-yZ-k6F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hif-8g-HcM">
+                        <rect key="frame" x="227" y="10" width="40" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="FzA-bJ-3YJ"/>
+                            <constraint firstAttribute="height" constant="30" id="Ka7-vi-93B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="赞 8">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickLikeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="S0S-tm-kLL"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic8-ZB-tTI">
+                        <rect key="frame" x="275" y="9" width="40" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="8nn-L4-ewP"/>
+                            <constraint firstAttribute="width" constant="40" id="Sb5-Eg-zvV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="分享 8">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Prl-Nt-aaj" secondAttribute="bottom" id="6Ql-im-HAi"/>
+                    <constraint firstItem="ic8-ZB-tTI" firstAttribute="leading" secondItem="hif-8g-HcM" secondAttribute="trailing" constant="8" id="DkT-j0-QOH"/>
+                    <constraint firstAttribute="bottom" secondItem="nQq-xO-Qac" secondAttribute="bottom" id="F9d-f6-9kP"/>
+                    <constraint firstItem="nQq-xO-Qac" firstAttribute="leading" secondItem="Prl-Nt-aaj" secondAttribute="trailing" constant="8" id="Kcy-c0-c93"/>
+                    <constraint firstAttribute="bottom" secondItem="hif-8g-HcM" secondAttribute="bottom" constant="3" id="WY4-B8-JAb"/>
+                    <constraint firstAttribute="bottom" secondItem="ic8-ZB-tTI" secondAttribute="bottom" constant="4" id="Y0F-XH-Hdc"/>
+                    <constraint firstAttribute="trailing" secondItem="ic8-ZB-tTI" secondAttribute="trailing" constant="5" id="Yst-Tu-vZI"/>
+                    <constraint firstItem="ic8-ZB-tTI" firstAttribute="leading" secondItem="hif-8g-HcM" secondAttribute="trailing" constant="8" id="dBM-Ly-csf"/>
+                    <constraint firstItem="Prl-Nt-aaj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kaR-FS-n8a"/>
+                    <constraint firstItem="ic8-ZB-tTI" firstAttribute="leading" secondItem="nQq-xO-Qac" secondAttribute="trailing" constant="8" id="lWd-eG-9Sx"/>
+                    <constraint firstItem="Prl-Nt-aaj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qhb-9N-5AL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="likeButton" destination="hif-8g-HcM" id="TTi-37-wGC"/>
+                <outlet property="shareButton" destination="ic8-ZB-tTI" id="BRS-7c-Mks"/>
+                <outlet property="summaryLabel" destination="nQq-xO-Qac" id="gZe-5J-ubm"/>
+                <outlet property="titleLabel" destination="Prl-Nt-aaj" id="sLC-JG-LAj"/>
+            </connections>
+            <point key="canvasLocation" x="-94" y="-21"/>
+        </tableViewCell>
+    </objects>
+</document>
