@@ -5,5 +5,6 @@ target 'MVC' do
     pod 'MJRefresh', '~> 2.4.10'
     pod 'Toast', '~> 3.0'
     pod 'ReactiveCocoa', '~> 2.5'
+    pod 'Masonry'
 end
 

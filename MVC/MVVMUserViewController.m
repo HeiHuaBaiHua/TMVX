@@ -7,6 +7,7 @@
 //
 
 #import "BlogView.h"
+#import "UserInfoController.h"
 #import "DetailViewController.h"
 #import "MVVMUserViewController.h"
 #import "UserInfoViewController.h"
@@ -19,8 +20,8 @@
 @property (assign, nonatomic) NSUInteger userId;
 
 @property (strong, nonatomic) BlogView *blogVC;
+@property (strong, nonatomic) UserInfoController *userInoController;
 @property (strong, nonatomic) UserInfoViewController *userInfoVC;
-
 @end
 
 @implementation MVVMUserViewController
@@ -74,17 +75,26 @@
     
     self.title = @"MVVM";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.userInfoVC = [UserInfoViewController instanceWithUserId:self.userId];
-    [self.userInfoVC setVCGenerator:^UIViewController *(id params) {
-        return [UserDetailViewController instanceWithUser:params];
-    }];
-    [self addChildViewController:self.userInfoVC];
+//    self.userInfoVC = [UserInfoViewController instanceWithUserId:self.userId];
+//    [self.userInfoVC setVCGenerator:^UIViewController *(id params) {
+//        return [UserDetailViewController instanceWithUser:params];
+//    }];
+//    [self addChildViewController:self.userInfoVC];
+    
+    @weakify(self);
+    self.userInoController = [UserInfoController instanceWithView:[UserInfoView new] viewModel:[UserInfoViewModel viewModelWithUserId:self.userId]];
+    [self.userInoController setOnClickIconCommand:[[RACCommand alloc] initWithSignalBlock:^RACSignal *(id user) {
+        @strongify(self);
+        
+        [self.navigationController pushViewController:[UserDetailViewController instanceWithUser:user] animated:YES];
+        return [RACSignal empty];
+    }]];
     
     self.blogVC = [BlogView instanceWithViewModel:[BlogViewModel viewModelWithUserId:self.userId]];
-    __weak typeof(self) weakSelf = self;
     [self.blogVC setDidSelectedRowCommand:[[RACCommand alloc] initWithSignalBlock:^RACSignal *(Blog *blog) {
-
-        [weakSelf.navigationController pushViewController:[BlogDetailViewController instanceWithBlog:blog] animated:YES];
+        @strongify(self);
+        
+        [self.navigationController pushViewController:[BlogDetailViewController instanceWithBlog:blog] animated:YES];
         return [RACSignal empty];
     }]];
 }
@@ -92,16 +102,23 @@
 - (void)addUI {
     
     CGFloat userInfoViewHeight = [UserInfoViewController viewHeight];
-    self.userInfoVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, userInfoViewHeight);
-    [self.view addSubview:self.userInfoVC.view];
+//    self.userInoController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, userInfoViewHeight);
+//    [self.view addSubview:self.userInoController.view];
+//    
+//    self.blogVC.tableView.frame = CGRectMake(0, self.userInfoVC.view.bottom, SCREEN_WIDTH, SCREEN_HEIGHT - self.userInfoVC.view.bottom - NAVBAR_HEIGHT);
     
-    self.blogVC.tableView.frame = CGRectMake(0, self.userInfoVC.view.bottom, SCREEN_WIDTH, SCREEN_HEIGHT - self.userInfoVC.view.bottom - NAVBAR_HEIGHT);
-    [self.view addSubview:self.blogVC.tableView];//只写了blog模块 其他的模块写法差不多 多写也没意义
+    self.userInoController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, userInfoViewHeight);
+    [self.view addSubview:self.userInoController.view];
+    
+    self.blogVC.tableView.frame = CGRectMake(0, self.userInoController.view.bottom, SCREEN_WIDTH, SCREEN_HEIGHT - self.userInoController.view.bottom - NAVBAR_HEIGHT);
+    
+    [self.view addSubview:self.blogVC.tableView];
 }
 
 - (void)fetchData {
     
-    [self.userInfoVC fetchData];
+//    [self.userInfoVC fetchData];
+    [self.userInoController fetchData]; //或者直接 [[self.userInoController.viewModel fetchUserInfoCommand] execute:nil];
     [self showHUD];
     [[self.blogVC.fetchDataCommand execute:nil] subscribeError:^(NSError *error) {
         [self hideHUD];

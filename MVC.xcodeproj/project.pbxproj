@@ -31,6 +31,9 @@
 		9D51A34E1E719B1F0032599F /* icon1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D51A34A1E719B1F0032599F /* icon1@3x.png */; };
 		9D51A34F1E719B1F0032599F /* like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D51A34B1E719B1F0032599F /* like@2x.png */; };
 		9D51A3501E719B1F0032599F /* like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D51A34C1E719B1F0032599F /* like@3x.png */; };
+		9D62F5EE1E8E84DE004D500D /* UserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D62F5ED1E8E84DE004D500D /* UserInfoController.m */; };
+		9D62F5F11E8E84FC004D500D /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D62F5F01E8E84FC004D500D /* UserInfoView.m */; };
+		9D62F5F41E8E851E004D500D /* UserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D62F5F31E8E851E004D500D /* UserInfoViewModel.m */; };
 		9DCB4A691E7439F40064E977 /* BlogCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB4A681E7439F40064E977 /* BlogCellViewModel.m */; };
 		9DCB4A6C1E7439FE0064E977 /* BlogViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB4A6B1E7439FE0064E977 /* BlogViewModel.m */; };
 		9DCB4A731E743A530064E977 /* BlogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB4A711E743A530064E977 /* BlogCell.m */; };
@@ -105,6 +108,12 @@
 		9D51A34A1E719B1F0032599F /* icon1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon1@3x.png"; sourceTree = "<group>"; };
 		9D51A34B1E719B1F0032599F /* like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@2x.png"; sourceTree = "<group>"; };
 		9D51A34C1E719B1F0032599F /* like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@3x.png"; sourceTree = "<group>"; };
+		9D62F5EC1E8E84DE004D500D /* UserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoController.h; sourceTree = "<group>"; };
+		9D62F5ED1E8E84DE004D500D /* UserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoController.m; sourceTree = "<group>"; };
+		9D62F5EF1E8E84FC004D500D /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
+		9D62F5F01E8E84FC004D500D /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		9D62F5F21E8E851E004D500D /* UserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewModel.h; sourceTree = "<group>"; };
+		9D62F5F31E8E851E004D500D /* UserInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewModel.m; sourceTree = "<group>"; };
 		9DCB4A671E7439F40064E977 /* BlogCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogCellViewModel.h; sourceTree = "<group>"; };
 		9DCB4A681E7439F40064E977 /* BlogCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogCellViewModel.m; sourceTree = "<group>"; };
 		9DCB4A6A1E7439FE0064E977 /* BlogViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogViewModel.h; sourceTree = "<group>"; };
@@ -206,6 +215,7 @@
 			children = (
 				9D0806CD1E73D4C600F929F7 /* Scene */,
 				9D0806CC1E73D4C100F929F7 /* V */,
+				9D62F5EB1E8E84AA004D500D /* C */,
 				9D0806CB1E73D4BB00F929F7 /* VM */,
 			);
 			name = MVVM;
@@ -269,6 +279,8 @@
 				9DCB4A6B1E7439FE0064E977 /* BlogViewModel.m */,
 				9DCB4A671E7439F40064E977 /* BlogCellViewModel.h */,
 				9DCB4A681E7439F40064E977 /* BlogCellViewModel.m */,
+				9D62F5F21E8E851E004D500D /* UserInfoViewModel.h */,
+				9D62F5F31E8E851E004D500D /* UserInfoViewModel.m */,
 			);
 			name = VM;
 			sourceTree = "<group>";
@@ -281,6 +293,8 @@
 				9DCB4A701E743A530064E977 /* BlogCell.h */,
 				9DCB4A711E743A530064E977 /* BlogCell.m */,
 				9DCB4A721E743A530064E977 /* BlogCell.xib */,
+				9D62F5EF1E8E84FC004D500D /* UserInfoView.h */,
+				9D62F5F01E8E84FC004D500D /* UserInfoView.m */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -301,6 +315,15 @@
 				9D0806EC1E73F92C00F929F7 /* MVPUserViewController.m */,
 			);
 			name = Scene;
+			sourceTree = "<group>";
+		};
+		9D62F5EB1E8E84AA004D500D /* C */ = {
+			isa = PBXGroup;
+			children = (
+				9D62F5EC1E8E84DE004D500D /* UserInfoController.h */,
+				9D62F5ED1E8E84DE004D500D /* UserInfoController.m */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 		9DDC09F71E703007003509E4 = {
@@ -587,6 +610,8 @@
 				9D51A33C1E7189EB0032599F /* BlogCellHelper.m in Sources */,
 				9D0806E21E73D55E00F929F7 /* DraftViewCell.m in Sources */,
 				9D0806D01E73D4FA00F929F7 /* BlogViewController.m in Sources */,
+				9D62F5F11E8E84FC004D500D /* UserInfoView.m in Sources */,
+				9D62F5EE1E8E84DE004D500D /* UserInfoController.m in Sources */,
 				9DDC0A321E7031B7003509E4 /* DraftTableViewController.m in Sources */,
 				9D51A33F1E7189F90032599F /* DraftCellHelper.m in Sources */,
 				9DCB4A6C1E7439FE0064E977 /* BlogViewModel.m in Sources */,
@@ -610,6 +635,7 @@
 				9DDC0A291E70317E003509E4 /* BlogTableViewCell.m in Sources */,
 				9DCB4A7D1E743B340064E977 /* BlogView.m in Sources */,
 				9DDC0A411E703281003509E4 /* UserAPIManager.m in Sources */,
+				9D62F5F41E8E851E004D500D /* UserInfoViewModel.m in Sources */,
 				9D0806DD1E73D54E00F929F7 /* BlogViewCell.m in Sources */,
 				9DDC0A1C1E703132003509E4 /* BlogTableViewController.m in Sources */,
 			);
